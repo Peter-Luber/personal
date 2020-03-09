@@ -29,7 +29,7 @@ a:focus {
 .AppX {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
   font-family: "Eurostile Extended", "Michroma";
@@ -69,6 +69,8 @@ a:focus {
   filter: contrast(0.75) brightness(1.2) hue-rotate(40deg) saturate(0.3);
   border-radius: 60px;
   overflow: hidden;
+  transform: scale(0.8);
+  box-shadow: 0em 1em 2em 1em rgba(0, 0, 0, 0.479);
 }
 
 #frame {

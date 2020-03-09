@@ -13,6 +13,7 @@ const hulkshare = "https://www.hulkshare.com/SvengaliLabel";
 const github = "https://github.com/sybarita";
 const soundCloudEmbed =
   "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1003014&color=%23cccccc&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+const slattPod = "http://157.245.190.160/";
 
 class App extends React.Component {
   render() {
@@ -29,11 +30,12 @@ class App extends React.Component {
           </div>
           <div id="soundcloud">
             <iframe
+              id="frame"
               width="100%"
-              height="100%"
-              scrolling="no"
+              height="150%"
+              scrolling="yes"
               frameBorder="no"
-              src={soundCloudEmbed}
+              src={slattPod}
             ></iframe>
           </div>
           <div id="bioBox">

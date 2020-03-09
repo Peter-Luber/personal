@@ -36,7 +36,7 @@
    </clipPath>
  </defs>
  <g transform="scale(.1)"
-    stroke="#000" stroke-width="15" fill="none">
+    stroke="#FFF" stroke-width="15" fill="none">
   <g clip-path="url(#outl)" >
   <use xlink:href="#d"/>
   <use y="780" xlink:href="#d"/>

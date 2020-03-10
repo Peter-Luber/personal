@@ -66,7 +66,6 @@ a:focus {
 #soundcloud {
   width: 330px;
   height: 489px;
-  filter: contrast(0.75) brightness(1.2) hue-rotate(40deg) saturate(0.3);
   border-radius: 60px;
   overflow: hidden;
   transform: scale(0.8);

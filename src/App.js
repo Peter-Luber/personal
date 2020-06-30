@@ -7,13 +7,13 @@ import helados3 from "./helados/helados3.wav";
 import helados4 from "./helados/helados4.wav";
 
 const title = "svengali";
-const linkedIn = "https://www.twitter.com/manfuckallyall";
+const linkedIn = "https://www.linkedin.com/in/peter-luber-0x65d";
 const soundcloud = "https://soundcloud.com/sven-gali";
 const hulkshare = "https://www.hulkshare.com/SvengaliLabel";
 const github = "https://github.com/sybarita";
 const soundCloudEmbed =
   "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1003014&color=%23cccccc&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
-const slattPod = "http://157.245.190.160/";
+const server = "http://157.245.190.160/";
 
 class App extends React.Component {
   render() {
@@ -35,7 +35,8 @@ class App extends React.Component {
               height="150%"
               scrolling="yes"
               frameBorder="no"
-              src={slattPod}
+              allowFullScreen="true" 
+              src={server}
             ></iframe>
           </div>
           <div id="bioBox">

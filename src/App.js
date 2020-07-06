@@ -5,40 +5,27 @@ import helados1 from "./helados/helados1.wav";
 import helados2 from "./helados/helados2.wav";
 import helados3 from "./helados/helados3.wav";
 import helados4 from "./helados/helados4.wav";
+import Circle from "./Circle";
 
 const title = "svengali";
 const linkedIn = "https://www.linkedin.com/in/peter-luber-0x65d";
 const soundcloud = "https://soundcloud.com/sven-gali";
 const hulkshare = "https://www.hulkshare.com/SvengaliLabel";
 const github = "https://github.com/sybarita";
-const soundCloudEmbed =
-  "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1003014&color=%23cccccc&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
-const server = "http://157.245.190.160/";
 
 class App extends React.Component {
   render() {
     return (
-      <div id="pageContainer">
-        <div
-          className="AppX"
-          autofocus="true"
-          tabIndex="1"
-          onKeyDown={this.keypressApp}
-        >
-          <div id="header">
-            <span id="headerSpan">{title}</span>
-          </div>
-          <div id="soundcloud">
-            <iframe
-              id="frame"
-              width="100%"
-              height="150%"
-              scrolling="yes"
-              frameBorder="no"
-              allowFullScreen="true" 
-              src={server}
-            ></iframe>
-          </div>
+      <div
+        className="AppX"
+        autofocus="true"
+        tabIndex="1"
+        onKeyDown={this.keypressApp}
+      >
+        <div className="Circle-wrapper">
+          <Circle className="Circle" />
+        </div>
+        <div id="foot">
           <div id="bioBox">
             <span id="bioSpan">
               <a href={soundcloud}>soundcloud</a>
@@ -50,9 +37,7 @@ class App extends React.Component {
               <a href={github}>github</a>
             </span>
           </div>
-          <div id="foot">
-            <span>℗ svengali 2020</span>
-          </div>
+          <span>℗ svengali 2020</span>
         </div>
       </div>
     );
@@ -63,7 +48,7 @@ class App extends React.Component {
   h3 = new Audio(helados3);
   h4 = new Audio(helados4);
 
-  keypressApp = event => {
+  keypressApp = (event) => {
     if (event.key === "s") {
       this.h1.play();
     } else if (event.key === "v") {

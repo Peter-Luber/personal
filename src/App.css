@@ -46,15 +46,34 @@ a:focus {
 
 .Circle-wrapper {
   margin: auto;
-  width: 100%;
+  width: 100vw;
   opacity: 0.1;
   position: absolute;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img {
+  animation: App-logo-spin infinite 10.8s ease-in-out;
+  -moz-animation: App-logo-spin infinite 10.8s ease-in-out;
+  width: 100vw;
 }
 
 .Circle {
   width: 100%;
   height: auto;
   display: inline-block;
+  z-index: 0;
   filter: blur(0px);
   opacity: 1;
   transition: filter 3.33s, opacity 3.33s;
@@ -69,7 +88,7 @@ a:focus {
   color: rgb(38, 38, 38);
   font-size: 10px;
   margin-top: 40vw;
-  opacity: 25%;
+  opacity: 0.25;
   position: absolute;
 }
 
@@ -87,7 +106,7 @@ a:focus {
   height: 100%;
 }
 
-#bioSpan:hover {
+#bioBox:hover {
   filter: brightness(1.2);
 }
 

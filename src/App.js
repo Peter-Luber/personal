@@ -7,7 +7,6 @@ import helados3 from "./helados/helados3.wav";
 import helados4 from "./helados/helados4.wav";
 import Circle from "./Circle";
 
-const title = "svengali";
 const linkedIn = "https://www.linkedin.com/in/peter-luber-0x65d";
 const soundcloud = "https://soundcloud.com/sven-gali";
 const hulkshare = "https://www.hulkshare.com/SvengaliLabel";

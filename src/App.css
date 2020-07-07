@@ -55,6 +55,7 @@ a:focus {
   width: 100%;
   height: auto;
   display: inline-block;
+  z-index: 0;
   filter: blur(0px);
   opacity: 1;
   transition: filter 3.33s, opacity 3.33s;
@@ -87,7 +88,7 @@ a:focus {
   height: 100%;
 }
 
-#bioSpan:hover {
+#bioBox:hover {
   filter: brightness(1.2);
 }
 

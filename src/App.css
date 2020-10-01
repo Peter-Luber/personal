@@ -10,6 +10,12 @@
   src: url("./fonts/EurostileExtendedBlack.ttf") format("truetype");
 }
 
+body {
+  padding: 0px;
+  margin: auto;
+  text-decoration: none;
+}
+
 iframe {
   border: 4px inset #ccc;
   border-radius: 8px;
@@ -36,9 +42,10 @@ h3 {
   transition: 1s;
   -webkit-transition: 1s;
   -moz-transition: 1s;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   width: 250px;
   outline: none;
+  text-decoration: none;
 }
 
 h2:hover,
@@ -55,7 +62,7 @@ p {
 }
 
 .page {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;

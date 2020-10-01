@@ -1,29 +1,32 @@
 body {
-  display: block;
-  margin: auto;
-  height: 100vh;
-  overflow: scroll;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  z-index: 1;
 }
 
 #root {
-  width: 100vw;
-  height: 100vh;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: auto;
+  
 }
 
 html {
-  background-color: #faffaf;
+  background-color: #f6f9ff;
   cursor: crosshair;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  filter: invert(10%) contrast(120%);
 }
 
 code {

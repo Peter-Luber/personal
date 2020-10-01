@@ -1,2 +1,1 @@
-# personal
-my personal website
+Personal portfolio website for Peter Luber

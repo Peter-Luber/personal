@@ -1,63 +1,136 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import "./App.css";
-import helados1 from "./helados/helados1.wav";
-import helados2 from "./helados/helados2.wav";
-import helados3 from "./helados/helados3.wav";
-import helados4 from "./helados/helados4.wav";
-import Circle from "./Circle";
+import a01 from "./128k/01.wav";
+import a02 from "./128k/02.wav";
+import a03 from "./128k/03.wav";
+import a04 from "./128k/04.wav";
+import a05 from "./128k/05.wav";
 
-const linkedIn = "https://www.linkedin.com/in/peter-luber-0x65d";
-const soundcloud = "https://soundcloud.com/sven-gali";
-const hulkshare = "https://www.hulkshare.com/SvengaliLabel";
-const github = "https://github.com/sybarita";
+import NavBar from "./components/container/NavBar";
+import Content from "./components/container/Content";
+import Header from "./components/display/Header";
+import Home from "./components/display/Home";
+import Contact from "./components/display/Contact";
+import Portfolio from "./components/display/Portfolio";
+import Services from "./components/display/Services";
+import Extras from "./components/display/Extras";
+
+import styled from "styled-components";
+
+const AppWrapper = styled.div`
+  display: grid;
+  text-align: center;
+  font-family: "Eurostile";
+  font-size: 0.75rem;
+  background-color: rgba(250, 250, 250, 0);
+  cursor: crosshair;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 35% 35% 10%;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  color: rgb(192, 192, 192);
+  z-index: 0;
+
+  &:focus {
+    outline: none;
+  }
+`;
 
 class App extends React.Component {
-  render() {
-    return (
-      <div
-        className="AppX"
-        autofocus="true"
-        tabIndex="1"
-        onKeyDown={this.keypressApp}
-      >
-        <div className="Circle-wrapper">
-          <Circle className="Circle" />
-        </div>
-        <div id="foot">
-          <div id="bioBox">
-            <span id="bioSpan">
-              <a href={soundcloud}>soundcloud</a>
-              <br></br>
-              <a href={hulkshare}>hulkshare</a>
-              <br></br>
-              <a href={linkedIn}>linkedin</a>
-              <br></br>
-              <a href={github}>github</a>
-            </span>
-          </div>
-          <span>℗ svengali 2020</span>
-        </div>
-      </div>
-    );
-  }
+  state = {
+    h1: new Audio(a01),
+    h2: new Audio(a02),
+    h3: new Audio(a03),
+    h4: new Audio(a04),
+    h5: new Audio(a05),
+    page: "home",
+    menu: "none",
+    height: "48px"
+  };
 
-  h1 = new Audio(helados1);
-  h2 = new Audio(helados2);
-  h3 = new Audio(helados3);
-  h4 = new Audio(helados4);
+  moonPress = () => {
+    console.log("moon");
+    return "";
+  };
 
-  keypressApp = (event) => {
-    if (event.key === "s") {
-      this.h1.play();
-    } else if (event.key === "v") {
-      this.h2.play();
+  keypressApp = event => {
+    if (event.key === "p") {
+      this.state.h1.play();
     } else if (event.key === "e") {
-      this.h3.play();
-    } else if (event.key === "n") {
-      this.h4.play();
+      this.state.h2.play();
+    } else if (event.key === "t") {
+      this.state.h3.play();
+    } else if (event.key === "e") {
+      this.state.h4.play();
+    } else if (event.key === "r") {
+      this.state.h5.play();
     }
   };
+
+  displaySwitch = () => {
+    switch (this.state.page) {
+      case "home":
+        return <Home changeDisplay={this.changeDisplay} />;
+      case "contact":
+        return <Contact changeDisplay={this.changeDisplay} />;
+      case "portfolio":
+        return <Portfolio changeDisplay={this.changeDisplay} />;
+      case "services":
+        return <Services changeDisplay={this.changeDisplay} />;
+      case "extras":
+        return <Extras changeDisplay={this.changeDisplay} />;
+      default:
+        console.log("oops state is broken!!");
+    }
+  };
+
+  changeDisplay = newDisplay => {
+    console.log(`Changing page state value to ${newDisplay}`);
+    this.setState({
+      page: newDisplay,
+      menu: "none",
+      height: "48px"
+    });
+  };
+
+  toggleMenu = () => {
+    switch (this.state.menu) {
+      case "none":
+        console.log("opening menu");
+        this.setState({
+          menu: "flex",
+          height: "300px"
+        });
+        return "flex";
+      case "flex":
+        console.log("closing menu");
+        this.setState({
+          menu: "none",
+          height: "48px"
+        });
+        return "none";
+      default:
+        console.log("state is broken!");
+    }
+  };
+
+  render() {
+    return (
+      <AppWrapper className="AppX" onKeyDown={this.keypressApp} tabIndex="0">
+        <Header />
+        <NavBar
+          changeDisplay={this.changeDisplay}
+          toggleMenu={this.toggleMenu}
+          menuState={this.state.menu}
+          height={this.state.height}
+          moonPress={this.moonPress}
+        />
+        <Content displaySwitch={this.displaySwitch} />
+      </AppWrapper>
+    );
+  }
 }
 
 export default App;

@@ -11,12 +11,14 @@ const ContentWrapper = styled.div`
   -moz-border-radius: 12px;
   border-radius: 12px;
   border-width: 5px;
-  border-color: rgba(250, 250, 250, 1);
+  border-color: rgba(245, 245, 245, 1);
   border-style: solid;
   margin-top: 87px;
   margin-left: 200px;
   margin-right: 4.4%;
-  box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.05);
   z-index: 5;
   overflow: visible;
 

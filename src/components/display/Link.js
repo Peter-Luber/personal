@@ -5,7 +5,7 @@ const CustomButton = styled.button`
   text-indent: 0;
   font-family: "Eurostile";
   font-size: 0.8rem;
-  color: rgba(209, 209, 209, 0.808);
+  color: rgba(190, 190, 190, 1);
   background-color: rgba(239, 246, 255, 0);
   border-style: none;
   width: 100%;

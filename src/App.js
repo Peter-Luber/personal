@@ -22,7 +22,7 @@ const AppWrapper = styled.div`
   text-align: center;
   font-family: "Eurostile";
   font-size: 0.75rem;
-  background-color: rgba(250, 250, 250, 0);
+  background-color: rgba(255, 255, 255, 0);
   cursor: crosshair;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 20% 35% 35% 10%;

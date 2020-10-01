@@ -12,7 +12,6 @@ const HeaderWrapper = styled.div`
   font-size: 0.9rem;
   font-family: "EurostileBlack";
   background-color: rgba(255, 255, 255, 0);
-  color: rgba(206, 206, 206, 0.555);
   line-height: 10px;
   grid-area: 1 / 1 / 2 / 2;
 
@@ -34,6 +33,7 @@ const HBox = styled.div`
   z-index: 9;
   overflow: visible;
   padding: 0.2rem;
+  color: rgba(195, 195, 195, 0.555);
 
   &:hover {
     color: rgba(254, 254, 254, 1);

@@ -8,7 +8,7 @@ function Crescent(props) {
     z-index: 20;
     justify-content: center;
     align-items: center;
-    background-color: rgba(250, 250, 250, 1);
+    background-color: rgba(250, 250, 250, 0);
     width: 38px;
     height: 38px;
     border-radius: 12px;
@@ -28,7 +28,7 @@ function Crescent(props) {
     width: 60%;
     height: 60%;
     border-radius: 100%;
-    background-color: rgba(230, 230, 230, 1);
+    background-color: rgba(210, 210, 210, 1);
     margin: auto;
 
     &:hover {
@@ -39,7 +39,7 @@ function Crescent(props) {
   const Moon = styled.div`
     z-index: 21;
     position: relative;
-    background-color: rgba(250, 250, 250, 1);
+    background-color: rgba(245, 245, 245, 1);
     width: 85%;
     height: 85%;
     border-radius: 100%;

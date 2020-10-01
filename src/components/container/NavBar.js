@@ -11,7 +11,7 @@ function NavBar(props) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgba(250, 250, 250, 1);
+    background-color: rgba(245, 245, 245, 1);
     border-radius: 12px;
 
     position: relative;

@@ -4,7 +4,7 @@ class Extras extends React.Component {
   render() {
     return (
       <div id="Extras" className="page">
-        try typing "peter" on your keyboard!
+        click here and try typing "peter" on your keyboard!
         <span role="img" aria-label="drum with drumsticks">🥁</span>
       </div>
     );

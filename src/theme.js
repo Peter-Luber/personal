@@ -19,3 +19,14 @@ export const hoverColor = theme('mode', {
     light: 'rgba(150, 150, 150, 1)',
     dark: 'rgba(195, 195, 195, 0.8)'
 });
+
+export const headerHover = theme('mode', {
+    light: 'rgba(254, 254, 254, 1)',
+    dark: 'rgba(1, 1, 1, 0.8)'
+});
+
+export const shadowColor = theme('mode', {
+    light: 'rgba(0, 0, 0, 0.09)',
+    dark: 'rgba(255, 255, 255, 0.04)'
+});
+

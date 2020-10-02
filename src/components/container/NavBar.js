@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "../display/Link";
 import Burger from "../display/Burger";
 import Crescent from "../display/Crescent";
-import { accentColor, backgroundColor } from "../../theme";
+import { accentColor, backgroundColor, shadowColor } from "../../theme";
 
 function NavBar(props) {
 
@@ -16,7 +16,9 @@ function NavBar(props) {
     background-color: ${accentColor};
     border-radius: 12px;
     position: relative;
-    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.08);
+    box-shadow: 0rem 0rem 1rem ${shadowColor};
+    -moz-box-shadow: 0rem 0rem 1rem ${shadowColor};
+    -webkit-box-shadow: 0rem 0rem 1rem ${shadowColor};
     z-index: 10;
 
     @media (min-width: 830px) {

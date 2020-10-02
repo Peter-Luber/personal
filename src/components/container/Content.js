@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { textColor, accentColor, backgroundColor } from "../../theme";
+import { textColor, accentColor, backgroundColor, shadowColor } from "../../theme";
 
 function Content(props) {
 
@@ -19,10 +19,9 @@ function Content(props) {
     margin-top: 87px;
     margin-left: 200px;
     margin-right: 4.4%;
-    ${'' /* implement shadow color variable */}
-    box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.09); 
-    -webkit-box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.09);
-    -moz-box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.09);
+    box-shadow: 0rem 0rem 10rem ${shadowColor}; 
+    -webkit-box-shadow: 0rem 0rem 10rem ${shadowColor};
+    -moz-box-shadow: 0rem 0rem 10rem ${shadowColor};
     z-index: 5;
     overflow: visible;
 

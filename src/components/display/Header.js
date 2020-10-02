@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { headerHover } from "../../theme";
+
 const HeaderWrapper = styled.div`
   display: flex;
   position: static;
@@ -36,7 +38,7 @@ const HBox = styled.div`
   color: rgba(195, 195, 195, 0.555);
 
   &:hover {
-    color: rgba(254, 254, 254, 1);
+    color: ${headerHover};
   }
 `;
 

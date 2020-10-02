@@ -49,7 +49,7 @@ function NavBar(props) {
     background-color: ${backgroundColor};
     border-radius: 7px;
     border-width: 5px;
-    border-color: rgba(250, 250, 250, 1);
+    border-color: ${accentColor};
     z-index: 10;
     width: 130px;
     height: 200px;

@@ -1,39 +1,49 @@
 import React from "react";
 import styled from "styled-components";
+import theme from "styled-theming";
 
-const CustomButton = styled.button`
-  text-indent: 0;
-  font-family: "Eurostile";
-  font-size: 0.8rem;
-  color: rgba(190, 190, 190, 1);
-  background-color: rgba(239, 246, 255, 0);
-  border-style: none;
-  width: 100%;
-  outline: none;
-  cursor: crosshair;
-  overflow: visible;
-  position: relative;
-  z-index: 10;
+function Link(props) {
 
-  &:hover,
-  &:active,
-  &:focus {
-    color: rgb(234, 234, 234);
-  }
-`;
+  const textColor = theme('mode', {
+    light: 'rgb(150, 150, 150)',
+    dark: 'rgb(90, 90, 90)'
+  });
 
-class Link extends React.Component {
-  render() {
+  const hoverColor = theme('mode', {
+    light: 'rgba(240, 240, 240, 1)',
+    dark: 'rgba(150, 150, 150, 1)'
+  });
+
+  const CustomButton = styled.button`
+    text-indent: 0;
+    font-family: "Eurostile";
+    font-size: 0.8rem;
+    color: ${textColor};
+    background-color: rgba(239, 246, 255, 0);
+    border-style: none;
+    width: 100%;
+    outline: none;
+    cursor: crosshair;
+    overflow: visible;
+    position: relative;
+    z-index: 10;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: ${hoverColor};
+    }
+  `;
+
     return (
-      <div className="Link" id={`${this.props.linkName}`}>
+      <div className="Link" id={`${props.linkName}`}>
         <CustomButton
-          onClick={() => this.props.changeDisplay(`${this.props.linkName}`)}
+          onClick={() => props.changeDisplay(`${props.linkName}`)}
         >
-          {this.props.linkName}
+          {props.linkName}
         </CustomButton>
       </div>
     );
   }
-}
 
 export default Link;

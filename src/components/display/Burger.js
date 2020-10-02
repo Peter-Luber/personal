@@ -1,19 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import theme from "styled-theming";
+
+const textColor = theme('mode', {
+  light: 'rgb(192, 192, 192)',
+  dark: 'rgb(60, 60, 60)'
+});
 
 const BurgerBox = styled.div`
   display: none;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   width: 40px;
   height: 48px;
-  background-color: rgba(235, 235, 235, 0);
-
-  &:hover,
-  &:active,
-  &:focus {
-    filter: brightness(104%);
-  }
+  background-color: rgba(0, 0, 0, 0);
 
   @media (max-width: 830px) {
     display: flex;
@@ -38,7 +39,7 @@ const BurgerImg = styled.div`
 const BurgerHam = styled.div`
   height: 3px;
   width: 33px;
-  background-color: #e9e9e9;
+  background-color: ${textColor};
   border-radius: 1.5px;
 `;
 

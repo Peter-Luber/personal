@@ -1,7 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import theme from "styled-theming";
 
 function Crescent(props) {
+
+  const textColor = theme('mode', {
+    light: 'rgb(192, 192, 192)',
+    dark: 'rgb(60, 60, 60)'
+  });
+
+  const accentColor = theme('mode', {
+    light: 'rgb(220, 220, 220)',
+    dark: 'rgb(90, 90, 90)'
+  });
+
+  const moonHover = theme('mode', {
+    light: 'rgba(255, 255, 255, 1)',
+    dark: 'rgba(150, 150, 150, 1)'
+  });
+
   const MoonOuter = styled.div`
     display: flex;
     position: relative;
@@ -28,18 +45,18 @@ function Crescent(props) {
     width: 60%;
     height: 60%;
     border-radius: 100%;
-    background-color: rgba(210, 210, 210, 1);
+    background-color: ${textColor};
     margin: auto;
 
     &:hover {
-      background-color: rgba(240, 240, 240, 1);
+      background-color: ${moonHover};
     }
   `;
 
   const Moon = styled.div`
     z-index: 21;
     position: relative;
-    background-color: rgba(245, 245, 245, 1);
+    background-color: ${accentColor};
     width: 85%;
     height: 85%;
     border-radius: 100%;

@@ -4,16 +4,28 @@ import Link from "../display/Link";
 import Burger from "../display/Burger";
 import Crescent from "../display/Crescent";
 
+import theme from "styled-theming";
+
 function NavBar(props) {
+
+  const backgroundColor = theme('mode', {
+    light: 'rgba(255, 255, 255, 1)',
+    dark: 'rgba(30, 30, 30, 1)'
+  });
+
+  const accentColor = theme('mode', {
+    light: 'rgb(220, 220, 220)',
+    dark: 'rgb(90, 90, 90)'
+  });
+
   const NavBarWrapper = styled.div`
     grid-area: 1 / 1 / 3 / 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgba(245, 245, 245, 1);
+    background-color: ${accentColor};
     border-radius: 12px;
-
     position: relative;
     box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.08);
     z-index: 10;
@@ -45,8 +57,8 @@ function NavBar(props) {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: white;
-    border-radius: 12px;
+    background-color: ${backgroundColor};
+    border-radius: 7px;
     border-width: 5px;
     border-color: rgba(250, 250, 250, 1);
     z-index: 10;
@@ -54,25 +66,42 @@ function NavBar(props) {
     height: 200px;
     overflow: hidden;
     margin: auto;
+    margin-top: 5px;
 
     @media (max-width: 830px) {
       display: ${props.menuState};
     }
   `;
 
-  console.log(props.menuState);
-
   return (
     <NavBarWrapper id="NavBar">
       <Burger toggleMenu={props.toggleMenu} />
       <LeftBox id="leftBox" className="page">
-        <Link changeDisplay={props.changeDisplay} linkName="home" />
-        <Link changeDisplay={props.changeDisplay} linkName="services" />
-        <Link changeDisplay={props.changeDisplay} linkName="portfolio" />
-        <Link changeDisplay={props.changeDisplay} linkName="contact" />
-        <Link changeDisplay={props.changeDisplay} linkName="extras" />
+        <Link
+          changeDisplay={props.changeDisplay}
+          linkName="home"
+        />
+        <Link
+          changeDisplay={props.changeDisplay}
+          linkName="services"
+        />
+        <Link
+          changeDisplay={props.changeDisplay}
+          linkName="portfolio"
+        />
+        <Link
+          changeDisplay={props.changeDisplay}
+          linkName="contact"
+        />
+        <Link
+          changeDisplay={props.changeDisplay}
+          linkName="extras"
+        />
       </LeftBox>
-      <Crescent moonPress={props.moonPress} menuState={props.menuState} />
+      <Crescent
+        moonPress={props.moonPress}
+        menuState={props.menuState}
+      />
     </NavBarWrapper>
   );
 }

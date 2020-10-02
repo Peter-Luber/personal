@@ -4,7 +4,7 @@ import styled from "styled-components";
 const HeaderWrapper = styled.div`
   display: flex;
   position: static;
-  z-index: 30;
+  z-index: 9;
   margin-left: 50px;
   margin-top: 5px;
   width: 100px;

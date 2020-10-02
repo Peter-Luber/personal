@@ -1,18 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "styled-theming";
+import { textColor, hoverColor } from "../../theme";
 
 function Link(props) {
-
-  const textColor = theme('mode', {
-    light: 'rgb(150, 150, 150)',
-    dark: 'rgb(90, 90, 90)'
-  });
-
-  const hoverColor = theme('mode', {
-    light: 'rgba(240, 240, 240, 1)',
-    dark: 'rgba(150, 150, 150, 1)'
-  });
 
   const CustomButton = styled.button`
     text-indent: 0;

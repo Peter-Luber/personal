@@ -16,18 +16,7 @@ import Services from "./components/display/Services";
 import Extras from "./components/display/Extras";
 
 import styled, { ThemeProvider } from "styled-components";
-
-import theme from "styled-theming";
-
-const backgroundColor = theme('mode', {
-  light: 'rgba(250, 250, 250, 1)',
-  dark: 'rgba(30, 30, 30, 1)'
-});
-
-const textColor = theme('mode', {
-  light: 'rgb(192, 192, 192)',
-  dark: 'rgb(60, 60, 60)'
-});
+import { textColor, backgroundColor } from "./theme";
 
 const AppWrapper = styled.div`
   display: grid;
@@ -60,14 +49,7 @@ class App extends React.Component {
     page: "home",
     menu: "none",
     height: "48px",
-    bg: "rgb(255, 255, 255)",
-    bg2: "rgb(245, 245, 245)",
-    bg3: "rgb(200, 200, 200)",
-    bg4: "rgb(150, 150, 150)"
-  };
-
-  moonPress = () => {
-    return "";
+    mode: "light"
   };
 
   keypressApp = event => {
@@ -131,13 +113,34 @@ class App extends React.Component {
     }
   };
 
-/*   currentMode = () => {
-    switch () {} ;
-  } */
+   modeToggle = () => {
+    switch (this.state.mode) {
+      case 'light':
+        console.log("going dark");
+        this.setState({
+          mode: 'dark'
+        });
+        return 'dark';
+      case 'dark':
+        console.log("lights on");
+        this.setState({
+          mode: 'light'
+        });
+        return 'dark';
+      default:
+        console.log("state is broken!");
+    };
+  }; 
+
+  moonPress = () => {
+    this.modeToggle();
+    console.log("toggling mode");
+    return "";
+  };
 
   render() {
     return (
-      <ThemeProvider theme={{ mode: 'light' }}>
+      <ThemeProvider theme={{ mode: this.state.mode}}>
         <AppWrapper className="AppX" onKeyDown={this.keypressApp} tabIndex="0">
           <Header />
           <NavBar

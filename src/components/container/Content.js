@@ -1,23 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "styled-theming";
+import { textColor, accentColor, backgroundColor } from "../../theme";
 
 function Content(props) {
-
-  const textColor = theme('mode', {
-    light: 'rgb(192, 192, 192)',
-    dark: 'rgb(60, 60, 60)'
-  });
-
-  const accentColor = theme('mode', {
-    light: 'rgb(220, 220, 220)',
-    dark: 'rgb(90, 90, 90)'
-  });
-
-  const backgroundColor = theme('mode', {
-    light: 'rgb(250, 250, 250)',
-    dark: 'rgb(30, 30, 30)'
-  })
 
   const ContentWrapper = styled.div`
     grid-area: 1 / 1 / 5 / 6;

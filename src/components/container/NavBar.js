@@ -3,20 +3,9 @@ import styled from "styled-components";
 import Link from "../display/Link";
 import Burger from "../display/Burger";
 import Crescent from "../display/Crescent";
-
-import theme from "styled-theming";
+import { accentColor, backgroundColor } from "../../theme";
 
 function NavBar(props) {
-
-  const backgroundColor = theme('mode', {
-    light: 'rgba(255, 255, 255, 1)',
-    dark: 'rgba(30, 30, 30, 1)'
-  });
-
-  const accentColor = theme('mode', {
-    light: 'rgb(220, 220, 220)',
-    dark: 'rgb(90, 90, 90)'
-  });
 
   const NavBarWrapper = styled.div`
     grid-area: 1 / 1 / 3 / 1;

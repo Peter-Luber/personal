@@ -4,21 +4,6 @@ import { textColor, accentColor, hoverColor } from "../../theme";
 
 function Crescent(props) {
 
-/*   const textColor = theme('mode', {
-    light: 'rgb(192, 192, 192)',
-    dark: 'rgb(60, 60, 60)'
-  });
-
-  const accentColor = theme('mode', {
-    light: 'rgb(220, 220, 220)',
-    dark: 'rgb(90, 90, 90)'
-  });
-
-  const hoverColor = theme('mode', {
-    light: 'rgba(255, 255, 255, 1)',
-    dark: 'rgba(150, 150, 150, 1)'
-  }); */
-
   const MoonOuter = styled.div`
     display: flex;
     position: relative;

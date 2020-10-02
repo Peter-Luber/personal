@@ -34,9 +34,9 @@ function Content(props) {
     margin-top: 87px;
     margin-left: 200px;
     margin-right: 4.4%;
-    box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.02);
-    -webkit-box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.02);
-    -moz-box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.02);
+    box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.09);
+    -webkit-box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0rem 0rem 10rem rgba(0, 0, 0, 0.09);
     z-index: 5;
     overflow: visible;
 

@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "styled-theming";
-
-const textColor = theme('mode', {
-  light: 'rgb(192, 192, 192)',
-  dark: 'rgb(60, 60, 60)'
-});
+import { textColor } from "../../theme";
 
 const BurgerBox = styled.div`
   display: none;

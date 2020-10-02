@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "styled-theming";
+import { textColor, accentColor, hoverColor } from "../../theme";
 
 function Crescent(props) {
 
-  const textColor = theme('mode', {
+/*   const textColor = theme('mode', {
     light: 'rgb(192, 192, 192)',
     dark: 'rgb(60, 60, 60)'
   });
@@ -14,10 +14,10 @@ function Crescent(props) {
     dark: 'rgb(90, 90, 90)'
   });
 
-  const moonHover = theme('mode', {
+  const hoverColor = theme('mode', {
     light: 'rgba(255, 255, 255, 1)',
     dark: 'rgba(150, 150, 150, 1)'
-  });
+  }); */
 
   const MoonOuter = styled.div`
     display: flex;
@@ -49,7 +49,7 @@ function Crescent(props) {
     margin: auto;
 
     &:hover {
-      background-color: ${moonHover};
+      background-color: ${hoverColor};
     }
   `;
 

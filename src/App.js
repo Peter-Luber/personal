@@ -20,7 +20,7 @@ import styled, { ThemeProvider } from "styled-components";
 import theme from "styled-theming";
 
 const backgroundColor = theme('mode', {
-  light: 'rgba(255, 255, 255, 0)',
+  light: 'rgba(250, 250, 250, 1)',
   dark: 'rgba(30, 30, 30, 1)'
 });
 
@@ -131,9 +131,13 @@ class App extends React.Component {
     }
   };
 
+/*   currentMode = () => {
+    switch () {} ;
+  } */
+
   render() {
     return (
-      <ThemeProvider theme={{ mode: 'dark' }}>
+      <ThemeProvider theme={{ mode: 'light' }}>
         <AppWrapper className="AppX" onKeyDown={this.keypressApp} tabIndex="0">
           <Header />
           <NavBar
@@ -142,10 +146,6 @@ class App extends React.Component {
             menuState={this.state.menu}
             height={this.state.height}
             moonPress={this.moonPress}
-            bg={this.state.bg}
-            bg2={this.state.bg2}
-            bg3={this.state.bg3}
-            bg4={this.state.bg4}
           />
           <Content
             displaySwitch={this.displaySwitch}

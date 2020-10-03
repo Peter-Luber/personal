@@ -8,7 +8,7 @@ class Portfolio extends React.Component {
         <br></br>
         <a href="http://157.245.190.160/" target="_blank" rel="noopener noreferrer">javascript/HTML5 music player</a>
         <br></br>
-        <a href="https://www.gewzer.online">gewzer landing page</a>
+        <a href="https://www.gewzer.online" target="_blank" rel="noopener noreferrer">gewzer landing page</a>
       </div>
     );
   }
